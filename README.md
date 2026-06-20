@@ -53,4 +53,6 @@ lib/constants.ts      # dados do negócio (WhatsApp, Instagram, textos padrão)
 
 ## Deploy
 
-Projeto hospedado no [Vercel](https://vercel.com). Deploy automático a cada push na branch `master` (quando o repositório estiver conectado ao projeto Vercel).
+Projeto hospedado no [Vercel](https://vercel.com): https://henrique-fazendas.vercel.app
+
+Repositório conectado ao projeto Vercel — todo push na branch `master` gera um deploy automático em produção.
