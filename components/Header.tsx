@@ -15,7 +15,7 @@ export default function Header() {
   const [open, setOpen] = useState(false);
 
   return (
-    <header className="sticky top-0 z-50 border-b border-[#1F3D2B]/10 bg-[#F5F1E8]/95 backdrop-blur">
+    <header className="sticky top-0 z-50 border-b border-[#1F3D2B]/10 bg-[#F5F1E8]/95 shadow-sm shadow-black/[0.03] backdrop-blur">
       <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4">
         <a href="#hero" className="font-display text-lg font-semibold tracking-tight text-[#1F3D2B]">
           {SITE.name}
@@ -26,7 +26,7 @@ export default function Header() {
             <a
               key={link.href}
               href={link.href}
-              className="text-sm font-medium text-[#1F3D2B]/80 transition hover:text-[#1F3D2B]"
+              className="relative text-sm font-medium text-[#1F3D2B]/80 transition after:absolute after:-bottom-1.5 after:left-0 after:h-px after:w-0 after:bg-[#C69C5D] after:transition-all after:duration-300 hover:text-[#1F3D2B] hover:after:w-full"
             >
               {link.label}
             </a>
@@ -37,7 +37,7 @@ export default function Header() {
           href={buildWhatsAppLink()}
           target="_blank"
           rel="noopener noreferrer"
-          className="hidden rounded-full bg-[#1F3D2B] px-6 py-2.5 text-sm font-semibold text-white transition hover:scale-105 lg:inline-block"
+          className="hidden rounded-full bg-[#1F3D2B] px-6 py-2.5 text-sm font-semibold text-white shadow-sm transition duration-300 hover:-translate-y-0.5 hover:shadow-md lg:inline-block"
         >
           Falar no WhatsApp
         </a>

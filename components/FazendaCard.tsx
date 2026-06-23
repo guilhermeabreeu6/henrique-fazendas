@@ -13,7 +13,7 @@ export default function FazendaCard({ fazenda }: { fazenda: Fazenda }) {
   );
 
   return (
-    <article className="group overflow-hidden rounded-2xl border border-[#1F3D2B]/10 bg-white/70 transition hover:shadow-xl">
+    <article className="group h-full overflow-hidden rounded-2xl border border-[#1F3D2B]/10 bg-white/70 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-xl">
       <div className="relative aspect-[4/3] overflow-hidden bg-[#1F3D2B]/10">
         {!imgError ? (
           <Image
@@ -64,7 +64,7 @@ export default function FazendaCard({ fazenda }: { fazenda: Fazenda }) {
             href={whatsAppLink}
             target="_blank"
             rel="noopener noreferrer"
-            className="rounded-full border border-[#1F3D2B] px-4 py-2 text-sm font-semibold text-[#1F3D2B] transition hover:bg-[#1F3D2B] hover:text-white"
+            className="rounded-full border border-[#1F3D2B] px-4 py-2 text-sm font-semibold text-[#1F3D2B] transition duration-300 hover:bg-[#1F3D2B] hover:text-white"
           >
             Consultar
           </a>

@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Reveal from "./Reveal";
 
 const PONTOS = [
   "Parte do MATOPIBA, uma das principais fronteiras agrícolas do Brasil",
@@ -9,16 +10,16 @@ const PONTOS = [
 
 export default function Regiao() {
   return (
-    <section id="regiao" className="bg-[#1F3D2B] py-24 text-white">
-      <div className="mx-auto grid max-w-7xl gap-12 px-6 lg:grid-cols-2 lg:items-center">
-        <div>
+    <section id="regiao" className="scroll-mt-20 bg-[#1F3D2B] py-24 text-white lg:py-28">
+      <div className="mx-auto grid max-w-7xl gap-12 px-6 lg:grid-cols-2 lg:items-center lg:gap-16">
+        <Reveal>
           <p className="text-sm font-semibold uppercase tracking-[0.3em] text-[#C69C5D]">
             Por que investir aqui
           </p>
-          <h2 className="font-display mt-4 text-3xl font-semibold md:text-4xl">
+          <h2 className="font-display mt-4 text-balance text-3xl font-semibold leading-tight md:text-4xl">
             Tocantins e MATOPIBA: a nova fronteira do agronegócio brasileiro
           </h2>
-          <p className="mt-6 text-white/80">
+          <p className="mt-6 leading-7 text-white/80">
             A região reúne terras produtivas, logística em expansão e preços
             de entrada ainda mais acessíveis do que em fronteiras agrícolas
             mais consolidadas — um cenário que atrai tanto produtores quanto
@@ -41,16 +42,16 @@ export default function Regiao() {
               </li>
             ))}
           </ul>
-        </div>
+        </Reveal>
 
-        <div className="relative aspect-[4/3] overflow-hidden rounded-2xl">
+        <Reveal delay={120} className="relative aspect-[4/3] overflow-hidden rounded-2xl shadow-2xl shadow-black/30">
           <Image
             src="https://images.unsplash.com/photo-1464226184884-fa280b87c399?auto=format&fit=crop&w=1200&q=80"
             alt="Paisagem de cerrado com áreas agrícolas no Tocantins"
             fill
             className="object-cover"
           />
-        </div>
+        </Reveal>
       </div>
     </section>
   );
